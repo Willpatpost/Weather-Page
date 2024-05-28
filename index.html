@@ -38,42 +38,17 @@
 
     <section id="projects" class="hidden">
         <h2>Projects</h2>
-        <div class="projects">
-            <div class="project">
-                <h3>Sliding Puzzle Game</h3>
-                <div class="project-images">
-                    <img src="https://github.com/Willpatpost/William-Poston/blob/main/Projects/Sliding%20Puzzle/Demo/Demo%20of%20Sliding%20Puzzle%20Uncompleted.png?raw=true" alt="Sliding Puzzle Game Screenshot">
-                    <img src="https://github.com/Willpatpost/William-Poston/blob/main/Projects/Sliding%20Puzzle/Demo/Demo%20of%20Sliding%20Puzzle%20Completed.png?raw=true" alt="Sliding Puzzle Game Screenshot">
-                </div>
-                <p>My first personal project is a sliding puzzle game. The goal is to move each tile into its correct position in ascending order from left-to-right and top-to-bottom. This project helped me improve my problem-solving skills and learn more about Java Swing for GUI development.</p>
-                <div class="project-links">
-                    <a class="btn btn-primary" href="https://github.com/Willpatpost/William-Poston/tree/main/Projects/Sliding%20Puzzle/Code/Main" target="_blank">View Source</a>
-                    <button id="playButton" class="btn btn-secondary">Play</button>
-                    <a class="btn btn-primary" href="https://github.com/Willpatpost/William-Poston/blob/main/Projects/Sliding%20Puzzle/Demo/Sliding%20Puzzle.jar" target="_blank">Download JAR File</a>
-                </div>
+        <div class="project">
+            <h3>Sliding Puzzle Game</h3>
+            <p>My first personal project is a sliding puzzle game. The goal is to move each tile into its correct position in ascending order from left-to-right and top-to-bottom. This project helped me improve my problem-solving skills and learn more about Java Swing for GUI development.</p>
+            <div class="project-images">
+                <img src="https://github.com/Willpatpost/William-Poston/blob/main/Projects/Sliding%20Puzzle/Demo/Demo%20of%20Sliding%20Puzzle%20Uncompleted.png?raw=true" alt="Sliding Puzzle Game Uncompleted">
+                <img src="https://github.com/Willpatpost/William-Poston/blob/main/Projects/Sliding%20Puzzle/Demo/Demo%20of%20Sliding%20Puzzle%20Completed.png?raw=true" alt="Sliding Puzzle Game Completed">
             </div>
-        </div>
-    </section>
-
-    <section id="puzzleGame" class="hidden">
-        <h2>Play Sliding Puzzle Game</h2>
-        <div id="gameModal" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closePuzzleGame()">&times;</span>
-                <div class="menu">
-                    <label for="sizeSelector">Select Puzzle Size:</label>
-                    <select id="sizeSelector">
-                        <option value="3">3x3</option>
-                        <option value="4" selected>4x4</option>
-                        <option value="5">5x5</option>
-                    </select>
-                    <button id="startButton">Start Game</button>
-                    <div id="status">
-                        <span id="moveCounter">Moves: 0</span>
-                        <span id="timer">Time: 00:00</span>
-                    </div>
-                </div>
-                <div id="puzzleGrid"></div>
+            <div class="project-links">
+                <button class="play-button" onclick="openSlidingPuzzle()">Play</button>
+                <a href="https://github.com/Willpatpost/William-Poston/tree/main/Projects/Sliding%20Puzzle/Code/Main" target="_blank" class="btn">View Source</a>
+                <a href="https://github.com/Willpatpost/William-Poston/blob/main/Projects/Sliding%20Puzzle/Demo/Sliding%20Puzzle.jar" target="_blank" class="btn">Download JAR File</a>
             </div>
         </div>
     </section>
@@ -104,22 +79,77 @@
                     <li>Problem Solving</li>
                 </ul>
             </div>
+            <div class="resume-item">
+                <h3>Awards/Achievements</h3>
+                <p>Details about awards and achievements...</p>
+            </div>
         </div>
-        <p>You can view my resume <a href="https://github.com/Willpatpost/Willpatpost/blob/dbf1303492b359898787f3448d01c385b5b2799d/Resume/Current%20Resume/William%20Poston%20Resume.pdf" target="_blank">here</a>.</p>
     </section>
 
     <section id="contact" class="hidden">
         <h2>Contact</h2>
         <p>If you'd like to get in touch, feel free to reach out via email or connect with me on LinkedIn.</p>
-        <p>Email: <a href="mailto:willpatpost@gmail.com">willpatpost@gmail.com</a></p>
+        
+        <p>
+        <img src="https://github.com/Willpatpost/William-Poston/blob/main/Images/For%20Webpage/Logos/Gmail_logo.png" alt="Email" style="width:24px;height:24px;vertical-align:middle;">
+        Email: <a href="mailto:willpatpost@gmail.com">William Poston Email</a>
+        </p>
+        
         <p>Phone: (757) 633-9689</p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/william-poston" target="_blank">William Poston LinkedIn</a></p>
-        <p>GitHub: <a href="https://github.com/Willpatpost" target="_blank">William Poston GitHub</a></p>
-        <p>Instagram: <a href="https://www.instagram.com/willlpatpost/" target="_blank">William Poston Instagram</a></p>
-        <p>Facebook: <a href="https://www.facebook.com/william.poston.3363" target="_blank">William Poston Facebook</a></p>
-        <p>X: <a href="https://x.com/Willpatpost" target="_blank">William Poston X</a></p>
-        <p>YouTube: <a href="https://www.youtube.com/channel/UCaZG-RuCnBDYka4JEtVXBhQ" target="_blank">William Poston YouTube</a></p>
+        
+        <p>
+        <img src="https://github.com/Willpatpost/William-Poston/blob/main/Images/For%20Webpage/Logos/LinkedIn%20Logo.png" alt="LinkedIn" style="width:24px;height:24px;vertical-align:middle;">
+        LinkedIn: <a href="https://www.linkedin.com/in/william-poston" target="_blank">William Poston LinkedIn</a>
+        </p>
+        
+        <p>
+        <img src="https://github.com/Willpatpost/William-Poston/blob/main/Images/For%20Webpage/Logos/GitHub%20logo.png" alt="GitHub" style="width:24px;height:24px;vertical-align:middle;">
+        GitHub: <a href="https://github.com/Willpatpost" target="_blank">William Poston GitHub</a>
+        </p>
+        
+        <p>
+        <img src="https://github.com/Willpatpost/William-Poston/blob/main/Images/For%20Webpage/Logos/Instagram%20logo.png" alt="Instagram" style="width:24px;height:24px;vertical-align:middle;">
+        Instagram: <a href="https://www.instagram.com/willlpatpost/" target="_blank">William Poston Instagram</a>
+        </p>
+
+        <p>
+        <img src="https://github.com/Willpatpost/William-Poston/blob/main/Images/For%20Webpage/Logos/Facebook%20logo.png" alt="Facebook" style="width:24px;height:24px;vertical-align:middle;">
+        Facebook: <a href="https://www.facebook.com/william.poston.3363" target="_blank">William Poston Facebook</a>
+        </p>
+        
+        <p>
+        <img src="https://github.com/Willpatpost/William-Poston/blob/main/Images/For%20Webpage/Logos/X_logo.png" alt="X" style="width:24px;height:24px;vertical-align:middle;">
+        X: <a href="https://x.com/Willpatpost" target="_blank">William Poston X</a>
+        </p>
+        
+        <p>
+        <img src="https://github.com/Willpatpost/William-Poston/blob/main/Images/For%20Webpage/Logos/YouTube_Logo.png" alt="YouTube" style="width:24px;height:24px;vertical-align:middle;">
+        YouTube: <a href="https://www.youtube.com/channel/UCaZG-RuCnBDYka4JEtVXBhQ" target="_blank">William Poston YouTube</a>
+        </p>
+        
     </section>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closeSlidingPuzzle()">&times;</span>
+            <h2>Sliding Puzzle Game by William Poston</h2>
+            <label for="size">Select Puzzle Size:</label>
+            <select id="size">
+                <option value="3">3x3</option>
+                <option value="4">4x4</option>
+                <option value="5">5x5</option>
+                <option value="6">6x6</option>
+                <option value="7">7x7</option>
+            </select>
+            <button onclick="startGame()">Play</button>
+            <div id="gameStats">
+                <p>Time: <span id="timer">00:00:00</span></p>
+                <p>Moves: <span id="moveCounter">0</span></p>
+            </div>
+            <div id="puzzleContainer"></div>
+            <p id="congratulationsMessage" style="display:none;">Congratulations! You finished the puzzle.</p>
+        </div>
+    </div>
 </div>
 
 <footer>
