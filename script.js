@@ -56,6 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const button = document.createElement("div");
             button.classList.add("puzzle-button");
             button.textContent = num === 0 ? "" : num;
+            button.style.backgroundColor = num === 0 ? "#f0f0f0" : "lightgreen"; // Light green color for visualization
             button.addEventListener("click", () => moveTile(index));
             puzzleGrid.appendChild(button);
             buttons.push(button);
@@ -95,12 +96,14 @@ document.addEventListener("DOMContentLoaded", () => {
         if (Math.abs(emptyRow - tileRow) + Math.abs(emptyCol - tileCol) === 1) {
             [puzzle[emptyIndex], puzzle[index]] = [puzzle[index], puzzle[emptyIndex]];
             buttons[emptyIndex].textContent = buttons[index].textContent;
+            buttons[emptyIndex].style.backgroundColor = "lightgreen"; // Light green for moved tile
             buttons[index].textContent = "";
+            buttons[index].style.backgroundColor = "#f0f0f0"; // Empty tile color
             moveCount++;
             moveCounter.textContent = `Moves: ${moveCount}`;
             if (isPuzzleSolved()) {
                 clearInterval(timer);
-                buttons.forEach(button => button.style.backgroundColor = "yellow");
+                buttons.forEach(button => button.style.backgroundColor = "gold"); // Gold color for solved puzzle
                 alert("Congratulations! You solved the puzzle!");
             }
         }
