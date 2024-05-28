@@ -14,8 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
     let timer;
     let startTime;
 
-    console.log("DOM fully loaded and parsed");
-
     // Open the puzzle game modal
     document.getElementById("playButton").addEventListener("click", () => {
         gameModal.style.display = "block";
@@ -133,14 +131,4 @@ function toggleSection(sectionId) {
             section.classList.add('hidden');
         }
     });
-}
-
-function openPuzzleGame() {
-    console.log("Opening puzzle game modal");
-    document.getElementById("gameModal").style.display = "block";
-}
-
-function closePuzzleGame() {
-    console.log("Closing puzzle game modal");
-    document.getElementById("gameModal").style.display = "none";
 }
