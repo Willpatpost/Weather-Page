@@ -15,17 +15,13 @@ document.addEventListener("DOMContentLoaded", () => {
     let timer;
     let startTime;
 
-    if (playButton) {
-        playButton.addEventListener("click", () => {
-            gameModal.style.display = "block";
-        });
-    }
+    playButton.addEventListener("click", () => {
+        gameModal.style.display = "block";
+    });
 
-    if (closeButton) {
-        closeButton.addEventListener("click", () => {
-            gameModal.style.display = "none";
-        });
-    }
+    closeButton.addEventListener("click", () => {
+        gameModal.style.display = "none";
+    });
 
     window.addEventListener("click", (event) => {
         if (event.target === gameModal) {
@@ -33,9 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    if (startButton) {
-        startButton.addEventListener("click", startGame);
-    }
+    startButton.addEventListener("click", startGame);
 
     function startGame() {
         puzzleSize = parseInt(sizeSelector.value);
