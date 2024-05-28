@@ -14,11 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
     let timer;
     let startTime;
 
-    // Open the puzzle game modal
-    document.getElementById("playButton").addEventListener("click", () => {
-        gameModal.style.display = "block";
-    });
-
     // Close the puzzle game modal
     closeButton.addEventListener("click", () => {
         gameModal.style.display = "none";
