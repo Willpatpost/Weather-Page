@@ -117,3 +117,14 @@ document.addEventListener("DOMContentLoaded", () => {
         return puzzle.slice(0, -1).every((num, i) => num === i + 1);
     }
 });
+
+function toggleSection(sectionId) {
+    const sections = document.querySelectorAll('section');
+    sections.forEach(section => {
+        if (section.id === sectionId) {
+            section.classList.toggle('hidden');
+        } else {
+            section.classList.add('hidden');
+        }
+    });
+}
