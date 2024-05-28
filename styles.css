@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f0f2f5;
@@ -17,17 +17,25 @@ nav {
     display: flex;
     justify-content: center;
     background-color: #333;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #ddd;
 }
 
-nav a {
+nav button {
+    background-color: #333;
     color: #fff;
+    border: none;
     padding: 14px 20px;
-    text-decoration: none;
+    cursor: pointer;
     text-align: center;
 }
 
-nav a:hover {
+nav button:hover, nav button.active {
     background-color: #555;
+    font-weight: bold;
+    border-bottom: 2px solid #4CAF50;
 }
 
 .container {
@@ -44,7 +52,12 @@ nav a:hover {
     padding-bottom: 10px;
 }
 
-/* Ensure your existing styles remain intact, and add these new ones */
+.profile-pic {
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
 .project-images {
     display: flex;
     justify-content: space-between;
@@ -53,6 +66,11 @@ nav a:hover {
 
 .project-images img {
     width: 48%;
+    transition: transform 0.3s ease;
+}
+
+.project-images img:hover {
+    transform: scale(1.05);
 }
 
 .project-links {
@@ -62,20 +80,22 @@ nav a:hover {
     gap: 10px;
 }
 
-.project-links a,
-.project-links button {
-    flex: 1;
-    text-align: center;
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
-    text-decoration: none;
+.btn {
+    padding: 10px 20px;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
+    text-align: center;
 }
 
-.project-links button {
+.btn-primary {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.btn-secondary {
     background-color: #008CBA;
+    color: white;
 }
 
 .projects, .resume {
@@ -190,4 +210,9 @@ footer {
 
 #status {
     margin-top: 10px;
+}
+
+/* Hidden sections */
+.hidden {
+    display: none;
 }
