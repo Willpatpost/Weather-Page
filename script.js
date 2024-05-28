@@ -15,13 +15,17 @@ document.addEventListener("DOMContentLoaded", () => {
     let timer;
     let startTime;
 
-    playButton.addEventListener("click", () => {
-        gameModal.style.display = "block";
-    });
+    if (playButton) {
+        playButton.addEventListener("click", () => {
+            gameModal.style.display = "block";
+        });
+    }
 
-    closeButton.addEventListener("click", () => {
-        gameModal.style.display = "none";
-    });
+    if (closeButton) {
+        closeButton.addEventListener("click", () => {
+            gameModal.style.display = "none";
+        });
+    }
 
     window.addEventListener("click", (event) => {
         if (event.target === gameModal) {
@@ -29,7 +33,9 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    startButton.addEventListener("click", startGame);
+    if (startButton) {
+        startButton.addEventListener("click", startGame);
+    }
 
     function startGame() {
         puzzleSize = parseInt(sizeSelector.value);
@@ -130,4 +136,12 @@ function toggleSection(sectionId) {
             section.classList.add('hidden');
         }
     });
+}
+
+function openPuzzleGame() {
+    document.getElementById("gameModal").style.display = "block";
+}
+
+function closePuzzleGame() {
+    document.getElementById("gameModal").style.display = "none";
 }
