@@ -2,133 +2,74 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f2f5;
+    background: linear-gradient(to right, #f8ffae, #43c6ac);
     color: #333;
+    padding-bottom: 100px; /* Ensure space for footer */
 }
 
 header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 20px 0;
     text-align: center;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    background-color: #333;
+    color: white;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+header p {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
 }
 
 nav {
-    display: flex;
-    justify-content: center;
+    text-align: center;
+    padding: 10px 0;
     background-color: #333;
     position: sticky;
-    top: 0;
+    top: 60px;
     z-index: 1000;
-    border-bottom: 1px solid #ddd;
 }
 
 nav button {
-    background-color: #333;
-    color: #fff;
+    background-color: #ff6347;
     border: none;
-    padding: 14px 20px;
+    color: white;
+    padding: 10px 20px;
     cursor: pointer;
-    text-align: center;
+    margin: 0 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
-nav button:hover, nav button.active {
-    background-color: #555;
-    font-weight: bold;
-    border-bottom: 2px solid #4CAF50;
+nav button:hover {
+    background-color: #ff4500;
 }
 
 .container {
     padding: 20px;
 }
 
-.section {
-    margin-bottom: 40px;
-}
-
-.section h2 {
-    color: #333;
-    border-bottom: 2px solid #4CAF50;
-    padding-bottom: 10px;
+.hidden {
+    display: none;
 }
 
 .profile-pic {
-    width: 150px;
-    border-radius: 50%;
-    margin-bottom: 20px;
-}
-
-.project-images {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-}
-
-.project-images img {
-    width: 48%;
-    transition: transform 0.3s ease;
-}
-
-.project-images img:hover {
-    transform: scale(1.05);
-}
-
-.project-links {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-}
-
-.btn {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-align: center;
-}
-
-.btn-primary {
-    background-color: #4CAF50;
-    color: white;
-}
-
-.btn-secondary {
-    background-color: #008CBA;
-    color: white;
-}
-
-.projects, .resume {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.project, .resume-item {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin: 10px;
-    padding: 20px;
-    width: calc(33% - 40px);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    transition: transform 0.2s;
-}
-
-.project:hover, .resume-item:hover {
-    transform: scale(1.05);
-}
-
-.project img {
-    width: 100%;
+    width: 200px;
     height: auto;
-    border-radius: 5px;
+    display: block;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
+.resume-item {
+    margin-bottom: 20px;
 }
 
 .skills-list {
@@ -137,35 +78,129 @@ footer {
 }
 
 .skills-list li {
-    background-color: #4CAF50;
-    color: white;
-    padding: 8px;
-    margin: 5px 0;
-    border-radius: 3px;
     display: inline-block;
+    background: #ff6347;
+    color: #fff;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 5px;
 }
 
-/* Modal styles */
-.modal {
+.project {
+    margin-bottom: 40px;
+}
+
+.project-images {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.project-images img {
+    width: 75%;
+    border-radius: 10px;
+}
+
+.project-links button,
+.project-links a {
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    display: inline-block;
+    text-align: center;
+}
+
+.project-links .play-button {
+    background-color: #1e90ff;
+    padding: 12.5px 25px; /* Slightly larger than other buttons */
+}
+
+.project-links .play-button:hover {
+    background-color: #1c86ee;
+}
+
+.project-links .btn {
+    background-color: #32cd32;
+}
+
+.project-links .btn:hover {
+    background-color: #2eb82e;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: white;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#puzzleContainer {
+    display: grid;
+    gap: 2px;
+    margin-top: 20px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 10px;
+}
+
+.tile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    background-color: #87ceeb;
+    color: #fff;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.tile:hover {
+    background-color: #00bfff;
+}
+
+.correct {
+    background-color: lightgreen !important;
+}
+
+.finished {
+    background-color: gold !important;
+}
+
+.popup {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 1001;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
-.modal-content {
-    background-color: #fefefe;
+.popup-content {
+    background-color: #fff;
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
     max-width: 600px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .close {
@@ -182,37 +217,50 @@ footer {
     cursor: pointer;
 }
 
-.menu {
-    margin-bottom: 20px;
-}
-
-#puzzleGrid {
-    display: grid;
-    gap: 5px;
-}
-
-.puzzle-button {
-    width: 80px;
-    height: 80px;
-    font-size: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    border: 1px solid #333;
-    background-color: #fff;
-    user-select: none;
-}
-
-.puzzle-button:hover {
-    background-color: #f0f0f0;
-}
-
-#status {
+label, select, button {
     margin-top: 10px;
+    display: inline-block;
 }
 
-/* Hidden sections */
-.hidden {
-    display: none;
+button {
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#gameStats {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+#congratulationsMessage {
+    margin-top: 20px;
+    font-size: 20px;
+    color: green;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav button {
+        padding: 10px;
+        margin: 2px;
+    }
+
+    .profile-pic {
+        width: 150px;
+    }
+
+    .project-images img {
+        width: 75%;
+    }
+
+    .project-links button,
+    .project-links a {
+        padding: 10px;
+        margin: 2px;
+    }
 }
