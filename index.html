@@ -15,10 +15,11 @@
     <p>Senior at Old Dominion University - Computer Science Major, Data Science Minor</p>
 </header>
 
-<nav>
-    <button onclick="toggleSection('about')">About Me</button>
-    <button onclick="toggleSection('projects')">Projects</button>
-    <button onclick="toggleSection('resume')">Resume</button>
+<nav id="navbar">
+    <a href="#about">About Me</a>
+    <a href="#projects">Projects</a>
+    <a href="#resume">Resume</a>
+    <a href="#contact">Contact</a>
 </nav>
 
 <div class="container">
@@ -35,22 +36,35 @@
         </ul>
     </section>
 
-    <section id="projects" class="hidden">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Sliding Puzzle Game</h3>
-            <p>My first personal project is a sliding puzzle game. The goal is to move each tile into its correct position in ascending order from left-to-right and top-to-bottom. This project helped me improve my problem-solving skills and learn more about Java Swing for GUI development.</p>
-            <div class="project-images">
-                <img src="https://github.com/Willpatpost/William-Poston/blob/main/Projects/Sliding%20Puzzle/Demo/Demo%20of%20Sliding%20Puzzle%20Uncompleted.png?raw=true" alt="Sliding Puzzle Game Uncompleted">
-                <img src="https://github.com/Willpatpost/William-Poston/blob/main/Projects/Sliding%20Puzzle/Demo/Demo%20of%20Sliding%20Puzzle%20Completed.png?raw=true" alt="Sliding Puzzle Game Completed">
-            </div>
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+        <button class="dropdown-btn" data-target="project1">Sliding Puzzle Game</button>
+        <div id="project1" class="dropdown-container hidden">
             <div class="project-links">
                 <button class="play-button" onclick="openSlidingPuzzle()">Play</button>
                 <a href="https://github.com/Willpatpost/William-Poston/tree/main/Projects/Sliding%20Puzzle/Code/Main" target="_blank" class="btn">View Source</a>
                 <a href="https://github.com/Willpatpost/William-Poston/blob/main/Projects/Sliding%20Puzzle/Demo/Sliding%20Puzzle.jar" target="_blank" class="btn">Download JAR File</a>
             </div>
+            <div class="project-images">
+                <img src="https://github.com/Willpatpost/William-Poston/blob/main/Projects/Sliding%20Puzzle/Demo/Demo%20of%20Sliding%20Puzzle%20Uncompleted.png?raw=true" alt="Sliding Puzzle Game Uncompleted">
+                <img src="https://github.com/Willpatpost/William-Poston/blob/main/Projects/Sliding%20Puzzle/Demo/Demo%20of%20Sliding%20Puzzle%20Completed.png?raw=true" alt="Sliding Puzzle Game Completed">
+            </div>
         </div>
-    </section>
+    </div>
+    <div class="project">
+        <button class="dropdown-btn" data-target="project2">Project 2</button>
+        <div id="project2" class="dropdown-container hidden">
+            <!-- Project 2 content -->
+        </div>
+    </div>
+    <div class="project">
+        <button class="dropdown-btn" data-target="project3">Project 3</button>
+        <div id="project3" class="dropdown-container hidden">
+            <!-- Project 3 content -->
+        </div>
+    </div>
+</section>
 
     <section id="resume" class="hidden">
         <h2>Resume</h2>
@@ -87,39 +101,41 @@
 
     <section id="contact" class="hidden">
         <h2>Contact</h2>
+        <p>If you'd like to get in touch, feel free to reach out via email or connect with me on LinkedIn.</p>
         <p>
             <img src="https://github.com/Willpatpost/William-Poston/blob/main/Images/For%20Webpage/Logos/Gmail_logo.png?raw=true" alt="Email" style="width:24px;height:24px;vertical-align:middle;">
-            Email: <a href="mailto:willpatpost@gmail.com">William Poston Email</a>
+            <a href="mailto:willpatpost@gmail.com">Email</a>
         </p>
         <p><img src="https://github.com/Willpatpost/William-Poston/blob/main/Images/For%20Webpage/Logos/Phone%20image.png?raw=true" alt="Phone" style="width:24px;height:24px;vertical-align:middle;">
             Phone: (757) 633-9689</p>
         <p>
             <img src="https://github.com/Willpatpost/William-Poston/blob/main/Images/For%20Webpage/Logos/LinkedIn%20Logo.png?raw=true" alt="LinkedIn" style="width:24px;height:24px;vertical-align:middle;">
-            LinkedIn: <a href="https://www.linkedin.com/in/william-poston" target="_blank">William Poston LinkedIn</a>
+            <a href="https://www.linkedin.com/in/william-poston" target="_blank">LinkedIn</a>
         </p>
         <p>
             <img src="https://github.com/Willpatpost/William-Poston/blob/main/Images/For%20Webpage/Logos/GitHub%20logo.png?raw=true" alt="GitHub" style="width:24px;height:24px;vertical-align:middle;">
-            GitHub: <a href="https://github.com/Willpatpost" target="_blank">William Poston GitHub</a>
+            <a href="https://github.com/Willpatpost" target="_blank">GitHub</a>
         </p>
         <p>
             <img src="https://github.com/Willpatpost/William-Poston/blob/main/Images/For%20Webpage/Logos/Instagram%20logo.png?raw=true" alt="Instagram" style="width:24px;height:24px;vertical-align:middle;">
-            Instagram: <a href="https://www.instagram.com/willlpatpost/" target="_blank">William Poston Instagram</a>
+            <a href="https://www.instagram.com/willlpatpost/" target="_blank">Instagram</a>
         </p>
         <p>
             <img src="https://github.com/Willpatpost/William-Poston/blob/main/Images/For%20Webpage/Logos/Facebook%20logo.png?raw=true" alt="Facebook" style="width:54px;height:24px;vertical-align:middle;">
-            Facebook: <a href="https://www.facebook.com/william.poston.3363" target="_blank">William Poston Facebook</a>
+            <a href="https://www.facebook.com/william.poston.3363" target="_blank">Facebook</a>
         </p>
         <p>
             <img src="https://github.com/Willpatpost/William-Poston/blob/main/Images/For%20Webpage/Logos/X_logo.png?raw=true" alt="X" style="width:24px;height:24px;vertical-align:middle;">
-            X: <a href="https://x.com/Willpatpost" target="_blank">William Poston X</a>
+            <a href="https://x.com/Willpatpost" target="_blank">X/Twitter</a>
         </p>
         <p>
             <img src="https://github.com/Willpatpost/William-Poston/blob/main/Images/For%20Webpage/Logos/YouTube_Logo.png?raw=true" alt="YouTube" style="width:72px;height:24px;vertical-align:middle;">
-            YouTube: <a href="https://www.youtube.com/channel/UCaZG-RuCnBDYka4JEtVXBhQ" target="_blank">William Poston YouTube</a>
+            <a href="https://www.youtube.com/channel/UCaZG-RuCnBDYka4JEtVXBhQ" target="_blank">YouTube</a>
         </p>
+        
     </section>
 
-    <div id="popup" class="popup">
+<div id="popup" class="popup">
         <div class="popup-content">
             <span class="close" onclick="closeSlidingPuzzle()">&times;</span>
             <h2>Sliding Puzzle Game by William Poston</h2>
