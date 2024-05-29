@@ -1,16 +1,14 @@
 let size, puzzle, timer, moveCounter, time, moves, interval;
 
 document.addEventListener("DOMContentLoaded", function() {
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            toggleSection(anchor.getAttribute('href').substring(1));
+        });
+    });
     toggleSection('about'); // Automatically open the About section on load
 });
-
-function toggleSection(sectionId) {
-    var sections = document.querySelectorAll('.container section');
-    sections.forEach(function(section) {
-        section.classList.add('hidden');
-    });
-    document.getElementById(sectionId).classList.remove('hidden');
-}
 
 function openSlidingPuzzle() {
     document.getElementById('popup').style.display = 'block';
@@ -121,4 +119,38 @@ function checkWin() {
         tiles.forEach(tile => tile.classList.add('finished'));
         document.getElementById('congratulationsMessage').style.display = 'block';
     }
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    document.querySelectorAll('.dropdown-btn').forEach(button => {
+        button.addEventListener('click', function() {
+            const projectId = this.getAttribute('data-target');
+            toggleDropdown(projectId);
+        });
+    });
+
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            toggleSection(anchor.getAttribute('href').substring(1));
+        });
+    });
+    toggleSection('about'); // Automatically open the About section on load
+});
+
+function toggleDropdown(projectId) {
+    const container = document.getElementById(projectId);
+    if (container) {
+        container.classList.toggle('hidden');
+    } else {
+        console.error('Project container not found:', projectId);
+    }
+}
+
+function toggleSection(sectionId) {
+    var sections = document.querySelectorAll('.container section');
+    sections.forEach(function(section) {
+        section.classList.add('hidden');
+    });
+    document.getElementById(sectionId).classList.remove('hidden');
 }
