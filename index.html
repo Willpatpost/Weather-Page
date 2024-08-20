@@ -70,19 +70,24 @@
     </div>
 </section>
 
-    <section id="resume" class="hidden">
+<section id="resume" class="hidden">
     <h2>Resume</h2>
     <div class="resume">
         <div class="resume-item">
             <h3>Education</h3>
                 <ul>
-                    <li>Old Dominion University, B.Sc. in Computer Science, Minor in Data Science</li>
-                    <li>Paul D. Camp Community College, A.Sc. in Computer Science</li>
+                    <li>Old Dominion University, B.Sc. in Computer Science, Minor in Data Science, GPA: 3.55/4.00, Expected Graduation: December 2025</li>
+                    <li>Paul D. Camp Community College, A.Sc. in Computer Science, GPA: 3.89/4.00, Graduation: December 2023</li>
                 </ul>
         </div>
         <div class="resume-item">
             <h3>Experience</h3>
-            <p>Details about professional or academic experiences...</p>
+            <ul>
+                <li><strong>CoVa CCI (Norfolk, VA) Programming Intern</strong> (January 2022 – May 2022)</li>
+                <p>Developed a subscription-based web extension product to protect and educate users on safe media usage and browsing practices. Placed first in competition and earned stakeholder sponsorship.</p>
+                <li><strong>NASA (Boulder, CO) LunaSat Team Lead</strong> (June 2022 – May 2023)</li>
+                <p>Led a team of 10 programmers and engineers to wire and program a LunaSat for the Artemis II launch scheduled in November 2024.</p>
+            </ul>
         </div>
         <div class="resume-item">
             <h3>Skills</h3>
@@ -95,76 +100,61 @@
                 <li>SQL</li>
                 <li>Data Analysis</li>
                 <li>Machine Learning</li>
-                <li>Git & GitHub</li>
-                <li>Problem Solving</li>
+                <li>MATLAB</li>
+                <li>Domo</li>
+                <li>Esri</li>
+                <li>Minitab</li>
+                <li>Wolfram Mathematica</li>
+                <li>Microsoft Office (Excel, Word, PowerPoint)</li>
+                <li>English, Spanish, Norwegian</li>
             </ul>
         </div>
         <div class="resume-item">
             <h3>Awards/Achievements</h3>
-            <p>Details about awards and achievements...</p>
+            <ul>
+                <li>Paul D. Camp President’s List x4</li>
+                <li>Cyber INNOVATE 2022 Winner</li>
+            </ul>
         </div>
     </div>
     <p>You can download my resume <a href="https://github.com/Willpatpost/William-Poston/blob/main/William%20Poston%20Resume%20(1).pdf" target="_blank">here</a>.</p>
 </section>
 
-    <section id="contact" class="hidden">
-        <h2>Contact</h2>
-        <p>If you'd like to get in touch, feel free to reach out via email or phone, or you can connect with me on any of these socials below.</p>
-        <p>
-            <img src="https://github.com/Willpatpost/William-Poston/blob/main/Images/For%20Webpage/Logos/Gmail_logo.png?raw=true" alt="Email" style="width:24px;height:24px;vertical-align:middle;">
-            <a href="mailto:willpatpost@gmail.com">Email</a>
-        </p>
-        <p><img src="https://github.com/Willpatpost/William-Poston/blob/main/Images/For%20Webpage/Logos/Phone%20image.png?raw=true" alt="Phone" style="width:24px;height:24px;vertical-align:middle;">
-            Phone: (757) 633-9689</p>
-        <p>
-            <img src="https://github.com/Willpatpost/William-Poston/blob/main/Images/For%20Webpage/Logos/LinkedIn%20Logo.png?raw=true" alt="LinkedIn" style="width:24px;height:24px;vertical-align:middle;">
-            <a href="https://www.linkedin.com/in/william-poston" target="_blank">LinkedIn</a>
-        </p>
-        <p>
-            <img src="https://github.com/Willpatpost/William-Poston/blob/main/Images/For%20Webpage/Logos/GitHub%20logo.png?raw=true" alt="GitHub" style="width:24px;height:24px;vertical-align:middle;">
-            <a href="https://github.com/Willpatpost" target="_blank">GitHub</a>
-        </p>
-        <p>
-            <img src="https://github.com/Willpatpost/William-Poston/blob/main/Images/For%20Webpage/Logos/Instagram%20logo.png?raw=true" alt="Instagram" style="width:24px;height:24px;vertical-align:middle;">
-            <a href="https://www.instagram.com/willlpatpost/" target="_blank">Instagram</a>
-        </p>
-        <p>
-            <img src="https://github.com/Willpatpost/William-Poston/blob/main/Images/For%20Webpage/Logos/Facebook%20logo.png?raw=true" alt="Facebook" style="width:54px;height:24px;vertical-align:middle;">
-            <a href="https://www.facebook.com/william.poston.3363" target="_blank">Facebook</a>
-        </p>
-        <p>
-            <img src="https://github.com/Willpatpost/William-Poston/blob/main/Images/For%20Webpage/Logos/X_logo.png?raw=true" alt="X" style="width:24px;height:24px;vertical-align:middle;">
-            <a href="https://x.com/Willpatpost" target="_blank">X/Twitter</a>
-        </p>
-        <p>
-            <img src="https://github.com/Willpatpost/William-Poston/blob/main/Images/For%20Webpage/Logos/YouTube_Logo.png?raw=true" alt="YouTube" style="width:72px;height:24px;vertical-align:middle;">
-            <a href="https://www.youtube.com/channel/UCaZG-RuCnBDYka4JEtVXBhQ" target="_blank">YouTube</a>
-        </p>
-        
-    </section>
-
-<div id="popup" class="popup">
-        <div class="popup-content">
-            <span class="close" onclick="closeSlidingPuzzle()">&times;</span>
-            <h2>Sliding Puzzle Game by William Poston</h2>
-            <label for="size">Select Puzzle Size:</label>
-            <select id="size">
-                <option value="3">3x3</option>
-                <option value="4">4x4</option>
-                <option value="5">5x5</option>
-                <option value="6">6x6</option>
-                <option value="7">7x7</option>
-            </select>
-            <button onclick="startGame()">Play</button>
-            <div id="gameStats">
-                <p>Time: <span id="timer">00:00:00</span></p>
-                <p>Moves: <span id="moveCounter">0</span></p>
-            </div>
-            <div id="puzzleContainer"></div>
-            <p id="congratulationsMessage" style="display:none;">Congratulations! You finished the puzzle.</p>
-        </div>
-    </div>
-</div>
+<section id="contact" class="hidden">
+    <h2>Contact</h2>
+    <p>If you'd like to get in touch, feel free to reach out via email or phone, or you can connect with me on any of these socials below.</p>
+    <p>
+        <img src="https://github.com/Willpatpost/William-Poston/blob/main/Images/For%20Webpage/Logos/Gmail_logo.png?raw=true" alt="Email" style="width:24px;height:24px;vertical-align:middle;">
+        <a href="mailto:willpatpost@gmail.com">Email</a>
+    </p>
+    <p><img src="https://github.com/Willpatpost/William-Poston/blob/main/Images/For%20Webpage/Logos/Phone%20image.png?raw=true" alt="Phone" style="width:24px;height:24px;vertical-align:middle;">
+        Phone: (757) 633-9689</p>
+    <p>
+        <img src="https://github.com/Willpatpost/William-Poston/blob/main/Images/For%20Webpage/Logos/LinkedIn%20Logo.png?raw=true" alt="LinkedIn" style="width:24px;height:24px;vertical-align:middle;">
+        <a href="https://www.linkedin.com/in/william-poston" target="_blank">LinkedIn</a>
+    </p>
+    <p>
+        <img src="https://github.com/Willpatpost/William-Poston/blob/main/Images/For%20Webpage/Logos/GitHub%20logo.png?raw=true" alt="GitHub" style="width:24px;height:24px;vertical-align:middle;">
+        <a href="https://github.com/Willpatpost" target="_blank">GitHub</a>
+    </p>
+    <p>
+        <img src="https://github.com/Willpatpost/William-Poston/blob/main/Images/For%20Webpage/Logos/Instagram%20logo.png?raw=true" alt="Instagram" style="width:24px;height:24px;vertical-align:middle;">
+        <a href="https://www.instagram.com/willlpatpost/" target="_blank">Instagram</a>
+    </p>
+    <p>
+        <img src="https://github.com/Willpatpost/William-Poston/blob/main/Images/For%20Webpage/Logos/Facebook%20logo.png?raw=true" alt="Facebook" style="width:54px;height:24px;vertical-align:middle;">
+        <a href="https://www.facebook.com/william.poston.3363" target="_blank">Facebook</a>
+    </p>
+    <p>
+        <img src="https://github.com/Willpatpost/William-Poston/blob/main/Images/For%20Webpage/Logos/X_logo.png?raw=true" alt="X" style="width:24px;height:24px;vertical-align:middle;">
+        <a href="https://x.com/Willpatpost" target="_blank">X/Twitter</a>
+    </p>
+    <p>
+        <img src="https://github.com/Willpatpost/William-Poston/blob/main/Images/For%20Webpage/Logos/YouTube_Logo.png?raw=true" alt="YouTube" style="width:72px;height:24px;vertical-align:middle;">
+        <a href="https://www.youtube.com/channel/UCaZG-RuCnBDYka4JEtVXBhQ" target="_blank">YouTube</a>
+    </p>
+    
+</section>
 
 <footer>
     <p>&copy; 2024 William Patric Poston</p>
