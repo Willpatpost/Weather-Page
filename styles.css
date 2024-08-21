@@ -189,12 +189,12 @@ footer {
     z-index: 100; /* Ensure footer is above other content */
 }
 
-/* Chatbot Icon within Footer */
+/* Chatbot Icon - Fixed Position */
 #chatbot-icon {
-    position: absolute;  /* Absolute position within the footer */
-    bottom: 10px;  /* Position the icon inside the footer */
+    position: fixed;  /* Fixed position to stick to bottom of viewport */
+    bottom: 20px;  /* Distance from the bottom of the screen */
     right: 20px;
-    background-color: transparent; /* Remove background to display only the image */
+    background-color: transparent;
     padding: 0;
     z-index: 9999;
 }
