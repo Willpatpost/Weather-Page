@@ -154,3 +154,33 @@ function toggleSection(sectionId) {
     });
     document.getElementById(sectionId).classList.remove('hidden');
 }
+
+function toggleChat() {
+    const chatWindow = document.getElementById('chat-window');
+    chatWindow.classList.toggle('hidden');
+}
+
+function sendMessage() {
+    const userInput = document.getElementById('user-input').value;
+    if (userInput.trim() !== "") {
+        addMessage(userInput, 'user');
+        addMessage("I'm just a placeholder response for now!", 'bot');
+        document.getElementById('user-input').value = '';
+    }
+}
+
+function addMessage(message, type) {
+    const chatMessages = document.getElementById('chat-messages');
+    const messageElement = document.createElement('div');
+    messageElement.classList.add('message');
+    messageElement.classList.add(type === 'bot' ? 'bot-message' : 'user-message');
+    messageElement.textContent = message;
+    chatMessages.appendChild(messageElement);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+}
+
+function checkEnter(event) {
+    if (event.key === 'Enter') {
+        sendMessage();
+    }
+}
