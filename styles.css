@@ -54,8 +54,7 @@ nav a:hover {
 }
 
 .container {
-    padding: 20px;
-    flex: 1;
+    padding-bottom: 100px; /* Add extra space to the bottom of the content to ensure the chatbot icon is not obstructed */
 }
 
 .hidden {
@@ -182,9 +181,9 @@ footer {
     color: white;
     width: 100%;
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
-    position: relative;
-    z-index: 100; /* Footer has a lower z-index than the chatbot icon */
-    margin-bottom: 60px; /* Creates space above the chatbot icon */
+    position: relative; /* Ensure footer stays at the end of content, not fixed to the screen */
+    z-index: 100;
+    margin-top: 20px;
 }
 
 #puzzleContainer {
