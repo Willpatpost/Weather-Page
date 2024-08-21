@@ -175,7 +175,6 @@ nav a:hover {
     background-color: #2eb82e;
 }
 
-/* Ensure the footer stays at the bottom */
 footer {
     text-align: center;
     padding: 10px 0;
@@ -183,9 +182,9 @@ footer {
     color: white;
     width: 100%;
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: auto;
-    position: sticky;
-    bottom: 0;
+    position: relative;
+    z-index: 100; /* Footer has a lower z-index than the chatbot icon */
+    margin-bottom: 60px; /* Creates space above the chatbot icon */
 }
 
 #puzzleContainer {
@@ -323,6 +322,7 @@ button {
     padding: 15px;
     cursor: pointer;
     box-shadow: 0px 2px 10px rgba(0,0,0,0.3);
+    z-index: 9999; /* Ensures the icon is above the footer */
 }
 
 #chatbot-icon img {
