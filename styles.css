@@ -1,12 +1,51 @@
-body {
-    font-family: 'Roboto', sans-serif;
+/* Ensure the body and html take full height */
+html, body {
+    height: 100%;
     margin: 0;
-    padding: 0;
-    background: linear-gradient(to right, #f8ffae, #43c6ac);
-    color: #333;
+}
+
+/* Flexbox to ensure footer stays at the bottom */
+body {
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* Ensure the body covers the full viewport height */
+}
+
+main.container {
+    flex: 1;
+    padding-bottom: 100px; /* Extra space to ensure the chatbot icon is not obstructed */
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: white;
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: auto; /* Push the footer to the bottom */
+    display: flex;
+    justify-content: space-between; /* Align content inside the footer */
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 120px; /* Adjusted height to fit the chatbot icon */
+}
+
+/* Chatbot Icon as part of Footer */
+#chatbot-icon {
+    background-color: transparent;
+    padding: 0;
+    margin-right: 20px; /* Align the icon properly inside the footer */
+}
+
+#chatbot-icon img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; /* Make the image a perfect circle */
+    object-fit: cover;  /* Ensure only the face is visible, without distortion */
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 header {
@@ -54,8 +93,8 @@ nav a:hover {
 }
 
 .container {
+    padding: 20px;
     flex: 1;
-    padding-bottom: 100px; /* Add extra space to the bottom of the content to ensure the chatbot icon is not obstructed */
 }
 
 .hidden {
@@ -173,41 +212,6 @@ nav a:hover {
 
 .project-links .btn:hover {
     background-color: #2eb82e;
-}
-
-/* Footer Styles */
-footer {
-    text-align: center;
-    padding: 20px 0;
-    background-color: #333;
-    color: white;
-    width: 100%;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    bottom: 0;
-    height: 120px;  /* Increased height for the chatbot icon */
-    z-index: 100; /* Ensure footer is above other content */
-    display: flex;
-    justify-content: space-between; /* Align content within the footer */
-    align-items: center;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-/* Chatbot Icon as part of Footer */
-#chatbot-icon {
-    position: relative;  /* No longer fixed, now part of footer */
-    background-color: transparent;
-    padding: 0;
-    margin-right: 20px; /* Ensures it's properly aligned inside the footer */
-}
-
-#chatbot-icon img {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%; /* Make the image a perfect circle */
-    object-fit: cover;  /* Ensure only the face is visible, without distortion */
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 #puzzleContainer {
