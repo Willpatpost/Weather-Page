@@ -321,7 +321,7 @@ button {
     padding: 15px;
     cursor: pointer;
     box-shadow: 0px 2px 10px rgba(0,0,0,0.3);
-    z-index: 9999; /* Ensures the icon is above the footer */
+    z-index: 9999; /* Ensures the icon is always in front of the footer */
 }
 
 #chatbot-icon img {
