@@ -119,6 +119,26 @@
     <p>You can download my resume <a href="https://github.com/Willpatpost/William-Poston/blob/main/William%20Poston%20Resume%20(1).pdf" target="_blank">here</a>.</p>
 </section>
 
+    <!-- Chatbot Icon and Chat Window -->
+<div id="chatbot">
+    <div id="chatbot-icon" onclick="toggleChat()">
+        <img src="chatbot-icon.png" alt="Chat Icon">
+    </div>
+    <div id="chat-window" class="hidden">
+        <div id="chat-header">
+            <span>willpatpostbot</span>
+            <button onclick="toggleChat()">X</button>
+        </div>
+        <div id="chat-body">
+            <div id="chat-messages"></div>
+        </div>
+        <div id="chat-footer">
+            <input type="text" id="user-input" placeholder="Type a message..." onkeypress="checkEnter(event)">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+</div>
+
     <section id="contact" class="hidden">
         <h2>Contact</h2>
         <p>If you'd like to get in touch, feel free to reach out via email or connect with me on LinkedIn.</p>
