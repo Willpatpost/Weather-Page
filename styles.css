@@ -185,18 +185,21 @@ footer {
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
     position: sticky;
     bottom: 0;
-    height: 120px;  /* Increased footer height to fit the chatbot icon */
+    height: 120px;  /* Increased height for the chatbot icon */
     z-index: 100; /* Ensure footer is above other content */
+    display: flex;
+    justify-content: space-between; /* Align content within the footer */
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
-/* Chatbot Icon - Fixed Position */
+/* Chatbot Icon as part of Footer */
 #chatbot-icon {
-    position: fixed;  /* Fixed position to stick to bottom of viewport */
-    bottom: 20px;  /* Distance from the bottom of the screen */
-    right: 20px;
+    position: relative;  /* No longer fixed, now part of footer */
     background-color: transparent;
     padding: 0;
-    z-index: 9999;
+    margin-right: 20px; /* Ensures it's properly aligned inside the footer */
 }
 
 #chatbot-icon img {
