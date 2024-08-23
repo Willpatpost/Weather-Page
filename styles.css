@@ -8,12 +8,12 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Ensure the body covers the full viewport height */
+    min-height: 100vh;
 }
 
 main.container {
     flex: 1;
-    padding-bottom: 100px; /* Extra space to ensure the chatbot icon is not obstructed */
+    padding-bottom: 100px;
 }
 
 /* Footer Styles */
@@ -24,55 +24,52 @@ footer {
     color: white;
     width: 100%;
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: auto; /* Push the footer to the bottom */
+    margin-top: auto;
     display: flex;
-    justify-content: space-between; /* Align content inside the footer */
+    justify-content: space-between;
     align-items: center;
     padding-left: 20px;
     padding-right: 20px;
-    height: 120px; /* Adjusted height to fit the chatbot icon */
+    height: 120px;
 }
 
-/* Chatbot Icon as part of Footer */
 #chatbot-icon {
     background-color: transparent;
     padding: 0;
-    margin-right: 20px; /* Align the icon properly inside the footer */
+    margin-right: 20px;
 }
 
 #chatbot-icon img {
     width: 60px;
     height: 60px;
-    border-radius: 50%; /* Make the image a perfect circle */
-    object-fit: cover;  /* Ensure only the face is visible, without distortion */
+    border-radius: 50%;
+    object-fit: cover;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 header {
     text-align: center;
     padding: 20px;
-    background-color: #333;
+    background-color: #444;
     color: white;
-    z-index: 1000;
 }
 
 header h1 {
     margin: 0;
-    font-size: 36px;
+    font-size: 40px;
 }
 
 header p {
     margin: 0;
     font-size: 18px;
-    font-weight: 700;
 }
 
 nav#navbar {
     text-align: center;
     padding: 10px 0;
-    background-color: #333;
+    background-color: #555;
     position: sticky;
-    top: 0; /* Adjusted to flush with the top of the screen */
+    top: 0;
     z-index: 1000;
 }
 
@@ -157,12 +154,6 @@ nav a:hover {
     background-color: #575757;
 }
 
-.dropdown-container {
-    display: none;
-    padding: 0 18px;
-    overflow: hidden;
-}
-
 .project-images {
     display: flex;
     justify-content: center;
@@ -171,7 +162,7 @@ nav a:hover {
 }
 
 .project-images img {
-    width: 22.5%; /* Reduced size by another 40% */
+    width: 22.5%;
     border-radius: 10px;
 }
 
@@ -194,8 +185,8 @@ nav a:hover {
     transition: background-color 0.3s;
     display: inline-block;
     text-align: center;
-    font-size: 16px; /* Same font size */
-    width: 150px; /* Same width */
+    font-size: 16px;
+    width: 150px;
 }
 
 .project-links .play-button {
@@ -335,11 +326,6 @@ button {
     }
 }
 
-/* Play button in the popup */
-.popup-content button {
-    background-color: #1e90ff;
-}
-
 /* Chat Window Styles */
 #chat-window {
     position: fixed;
@@ -414,4 +400,11 @@ button {
 .user-message {
     text-align: right;
     color: #000;
+}
+
+.contact-icon {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    margin-right: 10px;
 }
