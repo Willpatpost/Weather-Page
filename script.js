@@ -39,7 +39,7 @@ function updateTimerDisplay() {
     const hours = Math.floor(time / 3600).toString().padStart(2, '0');
     const minutes = Math.floor((time % 3600) / 60).toString().padStart(2, '0');
     const seconds = (time % 60).toString().padStart(2, '0');
-    document.getElementById('timer').textContent = `${hours}:${minutes}:${seconds}`;
+    document.getElementById('timer').textContent = ${hours}:${minutes}:${seconds};
 }
 
 function generatePuzzle(size) {
@@ -80,7 +80,7 @@ function isSolved(tiles) {
 
 function renderPuzzle() {
     const container = document.getElementById('puzzleContainer');
-    container.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+    container.style.gridTemplateColumns = repeat(${size}, 1fr);
     container.innerHTML = '';
     puzzle.forEach((tile, index) => {
         const tileElement = document.createElement('div');
@@ -120,6 +120,23 @@ function checkWin() {
         document.getElementById('congratulationsMessage').style.display = 'block';
     }
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    document.querySelectorAll('.dropdown-btn').forEach(button => {
+        button.addEventListener('click', function() {
+            const projectId = this.getAttribute('data-target');
+            toggleDropdown(projectId);
+        });
+    });
+
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            toggleSection(anchor.getAttribute('href').substring(1));
+        });
+    });
+    toggleSection('about'); // Automatically open the About section on load
+});
 
 function toggleDropdown(projectId) {
     const container = document.getElementById(projectId);
