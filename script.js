@@ -39,7 +39,7 @@ function updateTimerDisplay() {
     const hours = Math.floor(time / 3600).toString().padStart(2, '0');
     const minutes = Math.floor((time % 3600) / 60).toString().padStart(2, '0');
     const seconds = (time % 60).toString().padStart(2, '0');
-    document.getElementById('timer').textContent = ${hours}:${minutes}:${seconds};
+    document.getElementById('timer').textContent = `${hours}:${minutes}:${seconds}`;
 }
 
 function generatePuzzle(size) {
@@ -80,7 +80,7 @@ function isSolved(tiles) {
 
 function renderPuzzle() {
     const container = document.getElementById('puzzleContainer');
-    container.style.gridTemplateColumns = repeat(${size}, 1fr);
+    container.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
     container.innerHTML = '';
     puzzle.forEach((tile, index) => {
         const tileElement = document.createElement('div');
@@ -153,34 +153,4 @@ function toggleSection(sectionId) {
         section.classList.add('hidden');
     });
     document.getElementById(sectionId).classList.remove('hidden');
-}
-
-function toggleChat() {
-    const chatWindow = document.getElementById('chat-window');
-    chatWindow.classList.toggle('hidden');
-}
-
-function sendMessage() {
-    const userInput = document.getElementById('user-input').value;
-    if (userInput.trim() !== "") {
-        addMessage(userInput, 'user');
-        addMessage("I'm just a placeholder response for now!", 'bot');
-        document.getElementById('user-input').value = '';
-    }
-}
-
-function addMessage(message, type) {
-    const chatMessages = document.getElementById('chat-messages');
-    const messageElement = document.createElement('div');
-    messageElement.classList.add('message');
-    messageElement.classList.add(type === 'bot' ? 'bot-message' : 'user-message');
-    messageElement.textContent = message;
-    chatMessages.appendChild(messageElement);
-    chatMessages.scrollTop = chatMessages.scrollHeight;
-}
-
-function checkEnter(event) {
-    if (event.key === 'Enter') {
-        sendMessage();
-    }
 }
