@@ -1,58 +1,19 @@
-/* Ensure the body and html take full height */
-html, body {
-    height: 100%;
-    margin: 0;
-}
-
-/* Flexbox to ensure footer stays at the bottom */
 body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #ff5e62, #ff9966); /* Updated to fit "Gorgeous Contrast" */
+    color: #fff; /* Lighter color for better contrast */
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Ensure the body covers the full viewport height */
-}
-
-main.container {
-    flex: 1;
-    padding-bottom: 100px; /* Extra space to ensure the chatbot icon is not obstructed */
-}
-
-/* Footer Styles */
-footer {
-    text-align: center;
-    padding: 20px 0;
-    background-color: #333;
-    color: white;
-    width: 100%;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: auto; /* Push the footer to the bottom */
-    display: flex;
-    justify-content: space-between; /* Align content inside the footer */
-    align-items: center;
-    padding-left: 20px;
-    padding-right: 20px;
-    height: 120px; /* Adjusted height to fit the chatbot icon */
-}
-
-/* Chatbot Icon as part of Footer */
-#chatbot-icon {
-    background-color: transparent;
-    padding: 0;
-    margin-right: 20px; /* Align the icon properly inside the footer */
-}
-
-#chatbot-icon img {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%; /* Make the image a perfect circle */
-    object-fit: cover;  /* Ensure only the face is visible, without distortion */
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+    min-height: 100vh;
 }
 
 header {
     text-align: center;
     padding: 20px;
-    background-color: #333;
-    color: white;
+    background-color: #1b1b2f; /* Deep blue for contrast */
+    color: #fff; /* White text for contrast */
     z-index: 1000;
 }
 
@@ -70,14 +31,14 @@ header p {
 nav#navbar {
     text-align: center;
     padding: 10px 0;
-    background-color: #333;
+    background-color: #1b1b2f; /* Matching deep blue */
     position: sticky;
-    top: 0; /* Adjusted to flush with the top of the screen */
+    top: 0;
     z-index: 1000;
 }
 
 nav a {
-    background-color: #ff6347;
+    background-color: #f0134d; /* Vibrant red */
     border: none;
     color: white;
     padding: 10px 20px;
@@ -89,7 +50,7 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #ff4500;
+    background-color: #ffcb47; /* Bright yellow for hover */
 }
 
 .container {
@@ -116,7 +77,7 @@ nav a:hover {
     height: auto;
     display: block;
     margin: 20px auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Stronger shadow for contrast */
 }
 
 .resume-item {
@@ -130,7 +91,7 @@ nav a:hover {
 
 .skills-list li {
     display: inline-block;
-    background: #ff6347;
+    background: #f0134d; /* Vibrant red for skill badges */
     color: #fff;
     padding: 5px 10px;
     margin: 5px;
@@ -142,7 +103,7 @@ nav a:hover {
 }
 
 .dropdown-btn {
-    background-color: #333;
+    background-color: #1b1b2f; /* Deep blue */
     color: white;
     padding: 10px;
     border: none;
@@ -155,12 +116,6 @@ nav a:hover {
 
 .dropdown-btn:hover {
     background-color: #575757;
-}
-
-.dropdown-container {
-    display: none;
-    padding: 0 18px;
-    overflow: hidden;
 }
 
 .project-images {
@@ -199,26 +154,35 @@ nav a:hover {
 }
 
 .project-links .play-button {
-    background-color: #1e90ff;
+    background-color: #ffcb47; /* Bright yellow */
 }
 
 .project-links .btn {
-    background-color: #32cd32;
+    background-color: #f0134d; /* Red for other buttons */
 }
 
-.project-links .play-button:hover {
-    background-color: #1c86ee;
-}
-
+.project-links .play-button:hover,
 .project-links .btn:hover {
-    background-color: #2eb82e;
+    background-color: #1b1b2f; /* Deep blue on hover */
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #1b1b2f; /* Matching header/nav deep blue */
+    color: white;
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: auto;
+    position: sticky;
+    bottom: 0;
 }
 
 #puzzleContainer {
     display: grid;
     gap: 2px;
     margin-top: 20px;
-    border: 2px solid #333;
+    border: 2px solid #1b1b2f; /* Matching deep blue */
     border-radius: 10px;
     background-color: #fff;
     padding: 10px;
@@ -229,7 +193,7 @@ nav a:hover {
     align-items: center;
     justify-content: center;
     font-size: 24px;
-    background-color: #87ceeb;
+    background-color: #87ceeb; /* Light blue */
     color: #fff;
     cursor: pointer;
     user-select: none;
@@ -238,7 +202,7 @@ nav a:hover {
 }
 
 .tile:hover {
-    background-color: #00bfff;
+    background-color: #00bfff; /* Slightly darker blue */
 }
 
 .correct {
@@ -338,80 +302,4 @@ button {
 /* Play button in the popup */
 .popup-content button {
     background-color: #1e90ff;
-}
-
-/* Chat Window Styles */
-#chat-window {
-    position: fixed;
-    bottom: 80px;
-    right: 20px;
-    width: 300px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0px 2px 10px rgba(0,0,0,0.3);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    z-index: 1000;
-}
-
-#chat-window.hidden {
-    display: none;
-}
-
-#chat-header {
-    background-color: #007bff;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    font-weight: bold;
-}
-
-#chat-body {
-    padding: 10px;
-    height: 200px;
-    overflow-y: auto;
-    background-color: #f1f1f1;
-}
-
-#chat-footer {
-    display: flex;
-    padding: 10px;
-}
-
-#chat-footer input {
-    flex: 1;
-    padding: 5px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-#chat-footer button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    margin-left: 5px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#chat-messages {
-    font-family: 'Roboto', sans-serif;
-    color: #333;
-}
-
-.message {
-    margin-bottom: 10px;
-}
-
-.bot-message {
-    color: #007bff;
-    font-weight: bold;
-}
-
-.user-message {
-    text-align: right;
-    color: #000;
 }
