@@ -2,35 +2,53 @@ name: Update Weather Forecast
 
 on:
   schedule:
+    # Runs every hour on the hour
     - cron: '0 * * * *'
   workflow_dispatch:
 
 jobs:
   update-forecast:
     runs-on: ubuntu-latest
+
     steps:
+      # 1. Checkout the repository with full history
       - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # Fetch all history for all branches and tags
 
+      # 2. Set up Node.js environment
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '16'
+          node-version: '16'  # Specify the Node.js version you need
 
+      # 3. Install dependencies
       - name: Install dependencies
-        run: npm install node-fetch@2
+        run: npm install node-fetch@2  # Ensure node-fetch version matches your code
 
+      # 4. Fetch and update weather data
       - name: Fetch and update weather data
         run: node update-weather.js
 
-      - name: Configure Git and commit changes
+      # 5. Configure Git with your user details
+      - name: Configure Git
         run: |
           git config user.name "willpatpost"
           git config user.email "willpatpost@gmail.com"
+
+      # 6. Commit changes if there are any
+      - name: Commit changes
+        run: |
           git add forecast.json
           git commit -m "Update weather forecast [skip ci]" || echo "No changes to commit"
-      
+
+      # 7. Pull remote changes to ensure the local branch is up-to-date
+      - name: Pull remote changes
+        run: git pull --rebase origin main
+
+      # 8. Push changes using PAT for authentication
       - name: Push changes
         run: |
           git remote set-url origin https://willpatpost:${{ secrets.WEATHER_TOKEN }}@github.com/Willpatpost/Webpage.git
-          git push origin HEAD:main
+          git push origin main
