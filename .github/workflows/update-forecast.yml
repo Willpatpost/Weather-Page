@@ -2,7 +2,7 @@ name: Update Weather Forecast
 
 on:
   schedule:
-    # Runs every hour on the hour
+    # Runs every 30 minutes
     - cron: '*/30 * * * *'
   workflow_dispatch:
 
