@@ -2,7 +2,6 @@ name: Update Weather Forecast
 
 on:
   schedule:
-    # Runs every hour on the hour
     - cron: '0 * * * *'
   workflow_dispatch:
 
@@ -12,27 +11,26 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-      
+
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '16'
-      
+
       - name: Install dependencies
         run: npm install node-fetch@2
-      
+
       - name: Fetch and update weather data
         run: node update-weather.js
-      
+
       - name: Configure Git and commit changes
         run: |
           git config user.name "willpatpost"
           git config user.email "willpatpost@gmail.com"
           git add forecast.json
           git commit -m "Update weather forecast [skip ci]" || echo "No changes to commit"
-      
+
       - name: Push changes
         run: |
+          git remote set-url origin https://${{ github.actor }}:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/${{ github.repository }}
           git push origin HEAD:main
-        env:
-          GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
