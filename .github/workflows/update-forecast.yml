@@ -2,7 +2,7 @@ name: Update Weather Forecast
 
 on:
   schedule:
-    # This cron expression runs every hour on the hour
+    # Runs every hour on the hour
     - cron: '0 * * * *'
   workflow_dispatch:
 
@@ -23,10 +23,7 @@ jobs:
       
       - name: Fetch and update weather data
         run: node update-weather.js
-        env:
-          WEATHER_API_KEY: ${{ secrets.WEATHER_API_KEY }}
-          LOCATION: "Chesapeake,Virginia,US"
-          
+      
       - name: Configure Git and commit changes
         run: |
           git config user.name "willpatpost"
