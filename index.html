@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Local Weather</title>
+</head>
+<body>
+  <h1>Local Weather Forecast</h1>
+  <div id="weather-container">Loading weather data...</div>
+  <script>
+    fetch('forecast.json')
+      .then(response => response.json())
+      .then(data => {
+        const container = document.getElementById('weather-container');
+        container.innerHTML = `
+          <p><strong>Location:</strong> ${data.location}</p>
+          <p><strong>Temperature:</strong> ${data.temperature} °C</p>
+          <p><strong>Feels Like:</strong> ${data.feels_like} °C</p>
+          <p><strong>Conditions:</strong> ${data.description}</p>
+          <p><em>Last updated at: ${new Date(data.updated_at).toLocaleString()}</em></p>
+        `;
+      })
+      .catch(err => {
+        document.getElementById('weather-container').textContent = "Error loading weather data.";
+      });
+  </script>
+</body>
+</html>
