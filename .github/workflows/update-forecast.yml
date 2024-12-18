@@ -25,14 +25,17 @@ jobs:
         run: node update-weather.js
         env:
           WEATHER_API_KEY: ${{ secrets.WEATHER_API_KEY }}
-          LOCATION: "Your_City,Your_Country" # Replace with your location
-      
-      - name: Commit and push changes
+          LOCATION: "Chesapeake,Virginia,US"
+          
+      - name: Configure Git and commit changes
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name "willpatpost"
+          git config user.email "willpatpost@gmail.com"
           git add forecast.json
-          git commit -m "Update weather forecast [skip ci]"
-          git push
+          git commit -m "Update weather forecast [skip ci]" || echo "No changes to commit"
+      
+      - name: Push changes
+        run: |
+          git push origin HEAD:main
         env:
-          GITHUB_TOKEN: ${{ secrets.PAT }}
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
