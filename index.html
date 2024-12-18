@@ -6,7 +6,7 @@
   <title>Local Weather</title>
 </head>
 <body>
-  <h1>Local Weather Forecast</h1>
+  <h1>Chesapeake, VA Weather Forecast</h1>
   <div id="weather-container">Loading weather data...</div>
   <script>
     fetch('forecast.json')
@@ -15,10 +15,11 @@
         const container = document.getElementById('weather-container');
         container.innerHTML = `
           <p><strong>Location:</strong> ${data.location}</p>
-          <p><strong>Temperature:</strong> ${data.temperature} °C</p>
-          <p><strong>Feels Like:</strong> ${data.feels_like} °C</p>
-          <p><strong>Conditions:</strong> ${data.description}</p>
+          <p><strong>Temperature:</strong> ${data.temperature} °${data.temperature_unit}</p>
+          <p><strong>Wind Speed:</strong> ${data.wind_speed}</p>
+          <p><strong>Conditions:</strong> ${data.short_forecast}</p>
           <p><em>Last updated at: ${new Date(data.updated_at).toLocaleString()}</em></p>
+          <p><strong>Details:</strong> ${data.detailed_forecast}</p>
         `;
       })
       .catch(err => {
