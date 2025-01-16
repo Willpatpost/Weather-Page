@@ -1,9 +1,9 @@
 {
   "location": "Chesapeake, VA, US",
-  "temperature": 33,
+  "temperature": 37,
   "temperature_unit": "F",
-  "wind_speed": "7 mph",
-  "short_forecast": "Sunny",
+  "wind_speed": "9 mph",
+  "short_forecast": "Mostly Sunny",
   "detailed_forecast": "",
-  "updated_at": "2025-01-16T15:16:27.566Z"
+  "updated_at": "2025-01-16T16:19:24.698Z"
 }
