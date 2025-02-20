@@ -1,9 +1,9 @@
 {
   "location": "Chesapeake, VA, US",
-  "temperature": 27,
+  "temperature": 29,
   "temperature_unit": "F",
-  "wind_speed": "9 mph",
-  "short_forecast": "Patchy Blowing Snow",
+  "wind_speed": "13 mph",
+  "short_forecast": "Chance Light Snow And Patchy Blowing Snow",
   "detailed_forecast": "",
-  "updated_at": "2025-02-20T12:17:05.054Z"
+  "updated_at": "2025-02-20T16:11:55.197Z"
 }
